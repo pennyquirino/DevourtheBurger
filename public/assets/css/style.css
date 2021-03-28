@@ -4,16 +4,16 @@ body {
     background-size: cover;
 }
 
-#left-div {
+#leftDiv {
     float: left;
     width: 50%
 }
 
-#right-div {
+#rightDiv {
     float: right;
     width: 50%;
 }
 
-#top-div {
+#firstDiv {
     width: 100%;
 }

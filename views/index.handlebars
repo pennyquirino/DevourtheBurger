@@ -1,0 +1,22 @@
+<div id="firstDiv">
+    <form id="createForm">
+        <label for="burgers">Name Your Burger:</label>
+        <input type="text" id="burgers" name="name">
+        <button type="submit">Add Your Burger</button>
+    </form>
+</div>
+
+<div id="rightDiv">
+    <h1>Devoured</h1>
+    <ul id="devouredList">
+        {{#each burgers}}
+        {{#if devoured}}
+        <li> {{burger_name}} </li>
+        {{/if}}
+        {{/each}}
+    </ul>
+</div>
+
+<div id="leftDiv">
+    <h1>Order Your Burger</h1>
+</div>
