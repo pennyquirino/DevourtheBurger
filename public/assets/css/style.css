@@ -6,12 +6,15 @@ body {
 
 #leftDiv {
     float: left;
-    width: 50%
+    width: 50%;
+    background: black;
+    
 }
 
 #rightDiv {
     float: right;
     width: 50%;
+    background: black;
 }
 
 #firstDiv {
