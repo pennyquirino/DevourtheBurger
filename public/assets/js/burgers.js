@@ -1,6 +1,6 @@
 const express = require("express");
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3030;
 
 const app = express();
 
@@ -12,9 +12,8 @@ app.use(express.json());
 // set use of handlebars
 const exHbs = require("express-handlebars");
 
-app.engine("handlebars", exHbs({ defaultLayout: 'main' }));
+app.engine("handlebars", exHbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
-
 
 const routes = require('./controllers/burgers_controller.js');
 app.use(routes);

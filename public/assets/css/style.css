@@ -1,0 +1,19 @@
+body {
+    color: yellow;
+    background-image: url("/public/assets/img/burger.jpg");
+    background-size: cover;
+}
+
+#left-div {
+    float: left;
+    width: 50%
+}
+
+#right-div {
+    float: right;
+    width: 50%;
+}
+
+#top-div {
+    width: 100%;
+}
