@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
 
-const burger = require("../models/burger.js");
+const burger = require("../models/burger");
 
 router.get("/", (req, res) => {
     
-    burger.selectAll((data) => {
+    burger.all((data) => {
         const handlebarObject = {
             burgers: data,
         };
@@ -15,7 +15,7 @@ router.get("/", (req, res) => {
 });
 
 router.post("/api/burgers", (req, res) => {
-    burger.insertBurger(
+    burger.create(
         ["burger_name", "devoured"],
         [req.body.burger_name, req.body.devoured],
         (result) => res.json({ id: result.insertId })
@@ -25,7 +25,7 @@ router.post("/api/burgers", (req, res) => {
 router.put("/api/burgers/:id", (req, res) => {
     const condition = `id=${req.params.id}`;
     console.log("condition", condition);
-    burger.updateBurger(
+    burger.update(
         { 
             devoured: req.body.devoured,
         },
