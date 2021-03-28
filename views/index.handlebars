@@ -19,4 +19,14 @@
 
 <div id="leftDiv">
     <h1>Order Your Burger</h1>
+
+    {{#each burgers}}
+    {{#unless devoured}}
+    <div id="burger{{id}}">
+        <h3><button class="devourBtn" id="{{id}}">DEVOUR!!!</button>
+        {{burger_name}}   
+        </h3>
+    </div>
+    {{/unless}}
+    {{/each}}
 </div>
