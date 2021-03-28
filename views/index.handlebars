@@ -1,5 +1,5 @@
 <div id="firstDiv">
-    <form id="createForm">
+    <form id="createBurgerInput">
         <label for="burgers">Name Your Burger:</label>
         <input type="text" id="burgers" name="name">
         <button type="submit">Add Your Burger</button>
@@ -9,24 +9,26 @@
 <div id="rightDiv">
     <h1>Devoured</h1>
     <ul id="devouredList">
-        {{#each burgers}}
-        {{#if devoured}}
+        
+    {{#each burgers}} {{#if devoured}}
         <li> {{burger_name}} </li>
-        {{/if}}
-        {{/each}}
+
+    {{/if}} {{/each}}
     </ul>
 </div>
 
 <div id="leftDiv">
     <h1>Order Your Burger</h1>
 
-    {{#each burgers}}
-    {{#unless devoured}}
+    {{#each burgers}} {{#unless devoured}}
+
     <div id="burger{{id}}">
         <h3><button class="devourBtn" id="{{id}}">DEVOUR!!!</button>
+
         {{burger_name}}   
+
         </h3>
     </div>
-    {{/unless}}
-    {{/each}}
+
+    {{/unless}} {{/each}}
 </div>
